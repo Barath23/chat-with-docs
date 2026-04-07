@@ -190,6 +190,6 @@ llm = Ollama(model="mistral")
 
 ## 👤 Author
 
-**Your Name**
+**Barath Kumar Ramamoorthi**
 - GitHub: [Barath23](https://github.com/Barath23)
 - LinkedIn: [barath-kumar-r-2302](https://linkedin.com/in/barath-kumar-r-2302)
