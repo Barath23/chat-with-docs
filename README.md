@@ -15,11 +15,11 @@ A Retrieval-Augmented Generation (RAG) application that lets you chat with your 
 
 ## 🏗️ Architecture
 
-PDF Files → Loader → Chunker → Embeddings → ChromaDB (Vector Store)
-↓
+PDF Files → Loader → Chunker → Embeddings → Vector Store (ChromaDB)
+                                                        ↓
 User Question → Embeddings → Similarity Search → Top K Chunks
-↓
-Mistral 7B → Answer + Sources
+                                                        ↓
+                                          LLM → Answer with Sources
 
 ---
 
@@ -41,15 +41,15 @@ Mistral 7B → Answer + Sources
 chat-with-docs/
 ├── app.py                  # Streamlit UI
 ├── rag/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── loader.py           # PDF loading
 │   ├── chunker.py          # Text splitting
-│   ├── embedder.py         # HuggingFace embeddings
+│   ├── embedder.py         # Embeddings
 │   ├── vectorstore.py      # ChromaDB setup
 │   └── retriever.py        # Search + LLM chain
 ├── data/
 │   └── docs/               # Drop your PDFs here
-├── .env                    # API keys (not committed)
+├── .env                    # API keys
 ├── requirements.txt
 └── README.md
 
